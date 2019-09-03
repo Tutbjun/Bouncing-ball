@@ -46,19 +46,19 @@ void sprite(){
 
 void border(){ //funktion for al hitbox detection og lidt andet
   if(posx+50>border/2+scale_*border/2){ //hvis billedets position + dens bredde i x er ud over borderens højre sidde
-    speedx = -sqrt(pow(speedx,2)); //sætter den x hastighed til et negativt tal
+    speedx = -abs(speedx); //sætter den x hastighed til et negativt tal
     borderpushing(); //udførrer borderpushing funktionen
   }
   if(posy+31>border/2+scale_*border/2){ //hvis billedets position + dens bredde i y er ud over borderens højre sidde
-    speedy = -sqrt(pow(speedy,2)); //sætter den x hastighed til et negativt tal
+    speedy = -abs(speedy); //sætter den x hastighed til et negativt tal
     borderpushing(); //udførrer borderpushing funktionen
   }
   if(posx<690-(border/2+scale_*border/2)){ //hvis billedets position i x er ud over borderens venstre sidde
-    speedx = sqrt(pow(speedx,2)); //sætter den y hastighed til et positivt tal
+    speedx = abs(speedx); //sætter den y hastighed til et positivt tal
     borderpushing(); //udførrer borderpushing funktionen
   }
   if(posy<690-(border/2+scale_*border/2)){ //hvis billedets position i y er ud over borderens venstre sidde
-    speedy = sqrt(pow(speedy,2)); //sætter den y hastighed til et positivt tal
+    speedy = abs(speedy); //sætter den y hastighed til et positivt tal
     borderpushing(); //udførrer borderpushing funktionen
   }
   
